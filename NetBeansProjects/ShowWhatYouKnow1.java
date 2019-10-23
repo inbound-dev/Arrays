@@ -17,15 +17,25 @@ public class ShowWhatYouKnow1 {
      */
     public static void main(String[] args) {
        boolean Mainloop = true;
-       int NUM_COUNTER;
-       NUM_COUNTER = 10; 
+       
+        int TEAM_LIST; 
+        TEAM_LIST = 0;
+        
+        String [] teams = new String[5];
+        
+        Scanner ui = new Scanner(System.in);
+        
        
        while (Mainloop == true)
        {
-           for (int i = NUM_COUNTER; i>= 0; i--)
+           System.out.println("What Are Your Favourite Sports Teams (Atlest 5)");
+           
+           for (int i = TEAM_LIST; i<=4; i = i + 1)
            {
-               System.out.println(i);
+               teams[i] = ui.nextLine ();
            }
+           System.out.println("The Teams You Entered Were, " +teams[0] + ", " + teams[1] + ", "+ teams[2] + ", " + teams[3] + ", " + teams[4]);
+           Mainloop = false;
        }
     }
     
